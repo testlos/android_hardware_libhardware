@@ -777,6 +777,12 @@ typedef struct hwc_composer_device_1 {
     int (*setCursorPositionAsync)(struct hwc_composer_device_1 *dev, int disp, int x_pos, int y_pos);
 
     /*
+     *  Sprd add here:
+     *  Get builtin physical display number from vendor.
+     * */
+    int (*getBuiltInDisplayNum)(struct hwc_composer_device_1 *dev, uint32_t *number);
+
+    /*
      * Reserved for future use. Must be NULL.
      */
     void* reserved_proc[1];
